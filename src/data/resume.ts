@@ -129,7 +129,7 @@ export const projects: ProjectItem[] = [
     name: '시플로',
     tagline: '근무·일정을 한눈에 쉽게',
     description:
-      '교대근무와 유동적인 일정을 한 화면에서 관리할 수 있도록 돕는 근무·일정 관리 앱입니다. flemo 기반으로 개발한 웹뷰 기반 하이브리드 앱입니다.',
+      '교대근무와 유동적인 일정을 한 화면에서 관리할 수 있도록 돕는 근무·일정 관리 앱입니다. flemo 기반으로 개발한 하이브리드 앱입니다.',
     links: [
       { label: 'App Store', href: 'https://apps.apple.com/kr/app/시플로/id6757798018' },
       { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.shiflo' }
