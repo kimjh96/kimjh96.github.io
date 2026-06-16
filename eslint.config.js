@@ -26,7 +26,7 @@ export default tseslint.config(
   },
   {
     // 빌드 스크립트: Node 환경 + puppeteer page.evaluate 내부의 브라우저 전역 허용
-    files: ['scripts/**/*.{js,mjs}'],
+    files: ['scripts/**/*.{js,mjs,mts}'],
     languageOptions: {
       globals: { ...globals.node, ...globals.browser }
     }

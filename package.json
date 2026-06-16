@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "pdf": "bun run build && bun scripts/generate-pdf.mjs",
+    "pdf": "bun run build && bun scripts/generate-pdf.mts",
     "preview": "vite preview",
     "deploy": "bun run build && gh-pages -d dist -b gh-pages",
     "lint": "eslint .",
