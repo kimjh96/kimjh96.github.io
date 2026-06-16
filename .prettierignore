@@ -1,0 +1,7 @@
+dist
+node_modules
+bun.lock
+public
+.claude
+CLAUDE.md
+*.tsbuildinfo

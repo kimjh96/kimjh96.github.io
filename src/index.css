@@ -1,0 +1,250 @@
+@import 'tailwindcss';
+
+/* 다크 모드는 <html data-theme="dark">로 제어 (useThemeMode + index.html 인라인 스크립트).
+   색상은 아래 :root[data-theme='dark'] 토큰 오버라이드로 전환된다.
+   dark: 유틸리티는 색이 아닌 분기(예: 라이트/다크 로고 이미지 교체)에만 쓴다. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ── 디자인 토큰 (값은 기존 Emotion 테마와 1:1 동일, 라이트 기준) ── */
+@theme {
+  /* primary */
+  --color-primary: #3182f6;
+  --color-primary-hover: #1f78db;
+  --color-primary-glow: #3b8ef0;
+  --color-primary-a10: rgba(49, 130, 246, 0.08);
+  --color-primary-a20: rgba(49, 130, 246, 0.14);
+
+  /* accent */
+  --color-accent: #0066cc;
+  --color-accent-hover: #0052a3;
+  --color-accent-a10: rgba(0, 102, 204, 0.08);
+
+  /* neutral */
+  --color-neutral-100: #f9fafb;
+  --color-neutral-200: #f2f4f6;
+  --color-neutral-300: #e5e8eb;
+  --color-neutral-400: #d1d6db;
+  --color-neutral-500: #b0b8c1;
+  --color-neutral-600: #8b95a1;
+  --color-neutral-700: #6b7684;
+  --color-neutral-800: #4e5968;
+  --color-neutral-900: #191f28;
+
+  /* surfaces */
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-layer: #f7f8fa;
+  --color-card: #ffffff;
+  --color-glass: rgba(255, 255, 255, 0.72);
+
+  /* text / foreground */
+  --color-fg: #191f28;
+  --color-fg-secondary: #4e5968;
+  --color-fg-tertiary: #6b7684;
+  --color-fg-disabled: #b0b8c1;
+
+  /* border */
+  --color-border: #e5e8eb;
+  --color-border-light: #f2f4f6;
+  --color-border-dark: #d1d6db;
+
+  /* typography presets (font-size / line-height / weight / letter-spacing) */
+  --text-display1: 48px;
+  --text-display1--line-height: 56px;
+  --text-display1--font-weight: 700;
+  --text-display1--letter-spacing: -0.035em;
+
+  --text-display2: 36px;
+  --text-display2--line-height: 44px;
+  --text-display2--font-weight: 700;
+  --text-display2--letter-spacing: -0.03em;
+
+  --text-heading1: 28px;
+  --text-heading1--line-height: 36px;
+  --text-heading1--font-weight: 700;
+  --text-heading1--letter-spacing: -0.025em;
+
+  --text-heading2: 20px;
+  --text-heading2--line-height: 28px;
+  --text-heading2--font-weight: 700;
+  --text-heading2--letter-spacing: -0.02em;
+
+  --text-heading3: 17px;
+  --text-heading3--line-height: 24px;
+  --text-heading3--font-weight: 700;
+  --text-heading3--letter-spacing: -0.02em;
+
+  --text-body1: 16px;
+  --text-body1--line-height: 26px;
+  --text-body1--font-weight: 500;
+  --text-body1--letter-spacing: -0.01em;
+
+  --text-body2: 14px;
+  --text-body2--line-height: 22px;
+  --text-body2--font-weight: 500;
+  --text-body2--letter-spacing: -0.01em;
+
+  --text-small1: 13px;
+  --text-small1--line-height: 18px;
+  --text-small1--font-weight: 500;
+  --text-small1--letter-spacing: -0.005em;
+
+  --text-small2: 12px;
+  --text-small2--line-height: 16px;
+  --text-small2--font-weight: 500;
+  --text-small2--letter-spacing: 0em;
+
+  /* font family */
+  --font-sans:
+    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+/* ── 다크 모드 토큰 오버라이드 (:root[data-theme] 특이도로 @theme :root 보다 우선) ── */
+:root[data-theme='dark'] {
+  --color-primary: #60a5fa;
+  --color-primary-hover: #7baafb;
+  --color-primary-glow: #7baafb;
+  --color-primary-a10: rgba(96, 165, 250, 0.14);
+  --color-primary-a20: rgba(96, 165, 250, 0.22);
+
+  --color-accent: #3b82f6;
+  --color-accent-hover: #5696f8;
+  --color-accent-a10: rgba(59, 130, 246, 0.14);
+
+  --color-neutral-100: #1a1f26;
+  --color-neutral-200: #242a32;
+  --color-neutral-300: #2d343e;
+  --color-neutral-400: #3a424d;
+  --color-neutral-500: #55606e;
+  --color-neutral-600: #7b8494;
+  --color-neutral-700: #a5adb8;
+  --color-neutral-800: #d1d6db;
+  --color-neutral-900: #edeff1;
+
+  --color-background: #12161c;
+  --color-surface: #1a1f26;
+  --color-layer: #181d24;
+  --color-card: #1e242c;
+  --color-glass: rgba(18, 22, 28, 0.72);
+
+  --color-fg: #edeff1;
+  --color-fg-secondary: #a5adb8;
+  --color-fg-tertiary: #7b8494;
+  --color-fg-disabled: #55606e;
+
+  --color-border: #2d343e;
+  --color-border-light: #242a32;
+  --color-border-dark: #3a424d;
+}
+
+/* ── 전역 리셋 / 베이스 (기존 GlobalStyle.tsx 1:1 이전) ── */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-wrap: break-word;
+    color-scheme: light dark;
+  }
+
+  html,
+  body {
+    height: 100%;
+    /* Tailwind Preflight의 line-height:1.5 대신 기존 리셋과 동일하게 normal 유지.
+       명시적 leading 없는 단일 라인 텍스트의 줄 상자 높이를 원본과 일치시킨다. */
+    line-height: normal;
+    color: var(--color-fg);
+    background-color: var(--color-background);
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-a20);
+    color: var(--color-fg);
+  }
+
+  button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  svg,
+  img {
+    vertical-align: middle;
+  }
+}
+
+/* ── 인쇄(이력서 PDF) 전용 ──
+   네비/테마토글/푸터·다운로드 버튼 숨김, 폭/여백 조정은 컴포넌트의 print: 유틸리티에서 처리.
+   여기서는 용지·색상·페이지 분할 등 문서 레벨만 다룬다. */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: #ffffff;
+  }
+
+  /* 텍스트·테두리·이미지 색상을 인쇄에 그대로 보존 */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 프로젝트 카드(박스)만 페이지 경계에서 잘리지 않도록.
+     경력 항목(li)은 길어질 수 있어 자연스럽게 이어지도록 분할을 허용한다. */
+  article {
+    break-inside: avoid;
+  }
+
+  /* 경력·학력 항목을 인쇄에서도 "날짜 | 내용" 2단으로 고정.
+     A4 인쇄 폭(~688px)이 720px 미만이라 모바일 1단 분기가 걸리는 것을 덮어쓴다. */
+  [class*='grid-cols-[200px_1fr]'] {
+    grid-template-columns: 130px 1fr !important;
+    column-gap: 24px !important;
+  }
+
+  /* 섹션 제목이 본문과 떨어져 페이지 끝에 홀로 남지 않도록 */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+}

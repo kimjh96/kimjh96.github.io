@@ -1,0 +1,12 @@
+node_modules
+dist
+.DS_Store
+*.log
+.vite
+*.tsbuildinfo
+.env
+.env.local
+
+# Claude Code (개인 설정 — 공개 레포에 커밋하지 않음)
+CLAUDE.md
+.claude

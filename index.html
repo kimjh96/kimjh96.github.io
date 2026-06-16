@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="김종혁 — Frontend Developer. 사용자와 가까운 제품을, 측정할 수 있는 변화로."
+    />
+    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://kimjh96.github.io/" />
+
+    <!-- Open Graph (카카오톡 / 페이스북 / 링크드인 공유 카드) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="김종혁 · Frontend Developer" />
+    <meta property="og:title" content="김종혁 · Frontend Developer" />
+    <meta
+      property="og:description"
+      content="김종혁 — Frontend Developer. 사용자와 가까운 제품을, 측정할 수 있는 변화로."
+    />
+    <meta property="og:url" content="https://kimjh96.github.io/" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:image" content="https://kimjh96.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="김종혁 · Frontend Developer" />
+
+    <!-- Twitter / X 카드 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="김종혁 · Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="김종혁 — Frontend Developer. 사용자와 가까운 제품을, 측정할 수 있는 변화로."
+    />
+    <meta name="twitter:image" content="https://kimjh96.github.io/og-image.png" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <title>김종혁 · Frontend Developer</title>
+    <script>
+      // 첫 페인트 전에 data-theme를 적용해 다크 모드 플래시(FOUC) 방지
+      (function () {
+        try {
+          var stored = localStorage.getItem('kimjh96-theme');
+          var mode =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.dataset.theme = mode;
+          if (mode === 'dark') {
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#12161C');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
