@@ -62,7 +62,7 @@ export const experiences: ExperienceItem[] = [
     period: '2025.12 — 현재',
     location: '서울',
     summary:
-      '동물 실험 영상 속 동물의 행동을 AI로 분석하는 웹 소프트웨어 액트버스(Actverse)를 만드는 스타트업. Actverse 모노레포 전반의 프론트엔드를 담당하고 있습니다.',
+      '동물 실험 영상 속 동물의 행동을 AI로 분석하는 웹 소프트웨어 액트버스를 만드는 스타트업. 액트버스 모노레포 전반의 프론트엔드를 담당하고 있습니다.',
     stack: ['React', 'Next.js', 'TypeScript']
   },
   {
