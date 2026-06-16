@@ -143,7 +143,7 @@ export const projects: ProjectItem[] = [
     name: 'flemo',
     tagline: '네이티브 같은 화면 전환을 위한 React 라우터',
     description:
-      'flemo는 모바일 앱에서 익숙한 스택 기반 화면 전환을 React로 구현해, 하이브리드 앱·웹뷰 개발을 할 수 있도록 돕는 라우터입니다.',
+      '모바일 앱에서 익숙한 스택 기반 화면 전환 방식을 웹에 구현해, 자연스러운 하이브리드 앱·웹뷰 경험 구현을 돕는 라우터입니다.',
     links: [
       { label: '사이트', href: 'https://flemo.dev' },
       { label: 'GitHub', href: 'https://github.com/kimjh96/flemo' }
