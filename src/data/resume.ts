@@ -62,7 +62,7 @@ export const experiences: ExperienceItem[] = [
     period: '2025.12 — 현재',
     location: '서울',
     summary:
-      '동물 실험 영상 속 동물의 행동을 AI로 분석하는 웹 소프트웨어 액트버스를 만드는 스타트업. 액트버스 모노레포 전반의 프론트엔드를 담당하고 있습니다.',
+      '동물 실험 영상 속 동물의 행동을 AI로 분석하는 웹 소프트웨어 액트버스를 만드는 스타트업입니다. 액트버스 모노레포 전반의 프론트엔드를 담당하고 있습니다.',
     stack: ['React', 'Next.js', 'TypeScript']
   },
   {
@@ -71,7 +71,7 @@ export const experiences: ExperienceItem[] = [
     period: '2023.10 — 2025.11',
     location: '서울',
     summary:
-      '통합 아이돌봄 교육 서비스를 제공하는 스타트업. 째깍악어와 째깍섬 프론트엔드를 담당했습니다.',
+      '통합 아이돌봄 교육 서비스를 제공하는 스타트업입니다. 째깍악어와 째깍섬 프론트엔드를 담당했습니다.',
     impacts: [
       { text: 'Streaming SSR 도입으로 FCP를 1초대 → 0.6초대로 단축' },
       { text: '기존 PHP 어드민을 Next.js 기반으로 재구성하여 내부 운영 효율화' }
@@ -91,7 +91,7 @@ export const experiences: ExperienceItem[] = [
     period: '2021.10 — 2023.09',
     location: '서울',
     summary:
-      '중고 명품 통합검색과 유저 간 거래·비교 분석을 제공하는 C2C 플랫폼 카멜을 만드는 스타트업. 카멜의 프론트엔드를 담당했습니다.',
+      '중고 명품 통합검색과 유저 간 거래·비교 분석을 제공하는 C2C 플랫폼 카멜을 만드는 스타트업입니다. 카멜의 프론트엔드를 담당했습니다.',
     impacts: [
       {
         text: '매물 등록 → 주문·배송 → 회원/비회원 거래까지 커머스 전반의 흐름 구현 및 샌드버드 기반 채팅 기능 개발'
@@ -109,7 +109,7 @@ export const experiences: ExperienceItem[] = [
     period: '2020.01 — 2021.05',
     location: '서울',
     summary:
-      '텍스트와 영상 기반 콘텐츠를 생산·유통하는 소프트 콘텐츠 스타트업. 기존 제품 유지보수 및 자사 커머스 신규 제품 개발을 담당했습니다.',
+      '텍스트와 영상 기반 콘텐츠를 생산·유통하는 소프트 콘텐츠 스타트업입니다. 기존 제품 유지보수 및 자사 커머스 신규 제품 개발을 담당했습니다.',
     impacts: [
       { text: 'AWS ElastiCache(Memcached)로 API 평균 응답 1s → 200~300ms 단축' },
       { text: 'Cloudflare CDN 구성으로 콘텐츠 광고 페이지 트래픽 비용 약 70% 이상 절감' }
