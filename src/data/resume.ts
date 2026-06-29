@@ -63,7 +63,7 @@ export const experiences: ExperienceItem[] = [
     location: '서울',
     summary:
       '동물 실험 영상 속 동물의 행동을 AI로 분석하는 웹 소프트웨어 액트버스를 만드는 스타트업입니다. 액트버스 모노레포 전반의 프론트엔드를 담당하고 있습니다.',
-    stack: ['React', 'Next.js', 'TypeScript']
+    stack: ['React', 'Next.js', 'Vite', 'TypeScript', 'Tailwind CSS']
   },
   {
     company: '커넥팅더닷츠',
@@ -83,7 +83,7 @@ export const experiences: ExperienceItem[] = [
       '디자인 시스템 기반 UI 컴포넌트 라이브러리 개발 및 관리',
       'Electron·Next.js 기반 째깍섬 키오스크 웹 개발'
     ],
-    stack: ['React', 'Next.js', 'Flutter', 'Electron', 'TypeScript', 'Emotion']
+    stack: ['React', 'Next.js', 'Vite', 'Flutter', 'Electron', 'Stackflow', 'TypeScript', 'Emotion']
   },
   {
     company: '미스터카멜',
