@@ -101,7 +101,7 @@ export const experiences: ExperienceItem[] = [
       'Next.js 기반 카멜 하이브리드 앱 개발',
       '디자인 시스템 기반 UI 컴포넌트 라이브러리 개발 및 관리'
     ],
-    stack: ['React', 'Next.js', 'TypeScript', 'Sendbird']
+    stack: ['React', 'Next.js', 'TypeScript', 'Sendbird', 'Emotion']
   },
   {
     company: '패스트뷰',
@@ -120,7 +120,7 @@ export const experiences: ExperienceItem[] = [
       '패스트뷰 콘텐츠 광고 API 서버와 Next.js 기반 웹 개발',
       '패스트뷰 어드민 API 서버와 React CSR 기반 웹 개발'
     ],
-    stack: ['React', 'Next.js', 'Ruby on Rails', 'AWS', 'Webpack', 'CloudFront']
+    stack: ['React', 'Next.js', 'Ruby on Rails', 'AWS', 'Webpack']
   }
 ];
 
