@@ -35,8 +35,9 @@ export interface EducationItem {
 export const profile = {
   name: '김종혁',
   role: 'Frontend Developer',
+  intro: '안녕하세요. 7년 차 프론트엔드 개발자',
   tagline:
-    '웹과 하이브리드 앱을 개발해 왔습니다. 기능의 복잡함을 사용자가 그대로 마주하지 않도록 만드는 일을 중요하게 여깁니다.',
+    '웹과 하이브리드 앱을 주로 개발해 왔습니다. 기능의 복잡함을 사용자가 그대로 마주하지 않도록 만드는 일을 중요하게 여깁니다.',
   contacts: {
     email: 'kimjhs@kakao.com',
     phone: '010-3653-6892',

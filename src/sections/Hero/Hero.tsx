@@ -11,9 +11,11 @@ function Hero() {
       className="pb-24 pt-[120px] max-[600px]:pb-16 max-[600px]:pt-[88px] print:pb-6 print:pt-0"
     >
       <Container>
-        <p className="mb-5 text-[14px] font-bold tracking-[-0.01em] text-primary">{profile.role}</p>
+        <p className="mb-5 text-[14px] font-bold tracking-[-0.01em] text-primary">
+          {profile.intro}
+        </p>
         <h1 className="mb-4 text-[56px] font-bold leading-[64px] tracking-[-0.04em] text-fg max-[600px]:text-[40px] max-[600px]:leading-[48px]">
-          {profile.name}
+          {profile.name}입니다.
         </h1>
         <p className="mb-12 max-w-[680px] text-[22px] font-medium leading-[34px] tracking-[-0.02em] text-fg-secondary max-[600px]:mb-9 max-[600px]:text-[18px] max-[600px]:leading-[29px]">
           {profile.tagline}
