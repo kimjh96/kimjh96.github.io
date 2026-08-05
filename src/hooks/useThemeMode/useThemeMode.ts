@@ -49,5 +49,5 @@ export default function useThemeMode() {
     setPreferenceState(next);
   };
 
-  return { preference, setPreference };
+  return { mode, preference, setPreference };
 }

@@ -7,16 +7,16 @@ import { projects } from '@data/resume';
 function Projects() {
   return (
     <Section title="Projects" id="projects">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 print:gap-2">
         {projects.map((item) => (
           <article
             key={item.name}
-            className="flex flex-col gap-4 rounded-2xl border border-solid border-border bg-card p-7 transition-[border-color] duration-150 hover:border-border-dark"
+            className="flex flex-col gap-4 rounded-2xl border border-solid border-border bg-card p-7 transition-[border-color] duration-150 hover:border-border-dark print:gap-1 print:rounded-none print:border-x-0 print:border-t-0 print:bg-transparent print:p-0 print:pb-2"
           >
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div className="flex items-center gap-3">
                 {item.logo && (
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-solid border-border bg-layer">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-solid border-border bg-layer print:h-9 print:w-9 print:rounded-lg">
                     <img
                       src={item.logo}
                       alt=""
@@ -57,15 +57,20 @@ function Projects() {
                 ))}
               </div>
             </div>
-            <p className="text-[15px] leading-[26px] tracking-[-0.01em] text-fg-secondary">
+            <p className="text-[15px] leading-[26px] tracking-[-0.01em] text-fg-secondary print:text-[13px] print:leading-[20px]">
               {item.description}
             </p>
             {item.stack && item.stack.length > 0 && (
-              <div className="flex flex-wrap gap-1.5">
-                {item.stack.map((s) => (
-                  <Chip key={s}>{s}</Chip>
-                ))}
-              </div>
+              <>
+                <div className="flex flex-wrap gap-1.5 print:hidden">
+                  {item.stack.map((s) => (
+                    <Chip key={s}>{s}</Chip>
+                  ))}
+                </div>
+                <p className="hidden text-[10px] leading-4 text-fg-tertiary print:block">
+                  {item.stack.join(' · ')}
+                </p>
+              </>
             )}
           </article>
         ))}

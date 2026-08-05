@@ -6,7 +6,7 @@ import { experiences } from '@data/resume';
 function Experience() {
   return (
     <Section title="Experience" id="experience">
-      <ol className="flex flex-col gap-14">
+      <ol className="flex flex-col gap-14 print:gap-9">
         {experiences.map((exp) => (
           <li
             key={`${exp.company}-${exp.period}`}
@@ -18,7 +18,7 @@ function Experience() {
               </div>
               <div className="text-[13px] tracking-[-0.005em] text-fg-tertiary">{exp.location}</div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 print:gap-3">
               <div className="flex flex-wrap items-baseline gap-2">
                 <h3 className="text-[18px] font-bold leading-[26px] tracking-[-0.02em] text-fg">
                   {exp.role}
@@ -32,20 +32,15 @@ function Experience() {
                   {exp.summary}
                 </p>
               )}
-              {exp.isPlaceholder && (
-                <div className="inline-flex w-fit items-center gap-2 rounded-lg bg-layer px-3 py-2 text-[13px] tracking-[-0.005em] text-fg-tertiary">
-                  · 작성 예정
-                </div>
-              )}
               {exp.impacts && exp.impacts.length > 0 && (
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2.5">
                   {exp.impacts.map((impact, i) => (
                     <ImpactCard key={i}>{impact.text}</ImpactCard>
                   ))}
                 </div>
               )}
               {exp.bullets && exp.bullets.length > 0 && (
-                <ul className="flex flex-col gap-2 pl-0">
+                <ul className="flex flex-col gap-2 pl-0 print:gap-1.5">
                   {exp.bullets.map((b, i) => (
                     <li
                       key={i}
@@ -57,11 +52,16 @@ function Experience() {
                 </ul>
               )}
               {exp.stack && exp.stack.length > 0 && (
-                <div className="mt-1 flex flex-wrap gap-1.5">
-                  {exp.stack.map((s) => (
-                    <Chip key={s}>{s}</Chip>
-                  ))}
-                </div>
+                <>
+                  <div className="mt-1 flex flex-wrap gap-1.5 print:hidden">
+                    {exp.stack.map((s) => (
+                      <Chip key={s}>{s}</Chip>
+                    ))}
+                  </div>
+                  <p className="hidden text-[10px] leading-4 text-fg-tertiary print:block">
+                    {exp.stack.join(' · ')}
+                  </p>
+                </>
               )}
             </div>
           </li>

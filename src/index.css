@@ -228,14 +228,14 @@
     print-color-adjust: exact;
   }
 
-  /* 프로젝트 카드(박스)만 페이지 경계에서 잘리지 않도록.
-     경력 항목(li)은 길어질 수 있어 자연스럽게 이어지도록 분할을 허용한다. */
+  /* 프로젝트는 페이지 경계에서 나뉘지 않도록 한다. */
   article {
     break-inside: avoid;
   }
 
   /* 경력·학력 항목을 인쇄에서도 "날짜 | 내용" 2단으로 고정.
      A4 인쇄 폭(~688px)이 720px 미만이라 모바일 1단 분기가 걸리는 것을 덮어쓴다. */
+  [class*='grid-cols-[168px_1fr]'],
   [class*='grid-cols-[200px_1fr]'] {
     grid-template-columns: 130px 1fr !important;
     column-gap: 24px !important;
