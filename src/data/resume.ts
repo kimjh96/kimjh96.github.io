@@ -32,6 +32,11 @@ export interface EducationItem {
   period: string;
 }
 
+export interface CertificationItem {
+  name: string;
+  acquiredAt: string;
+}
+
 export const profile = {
   name: '김종혁',
   role: 'Frontend Developer',
@@ -151,5 +156,12 @@ export const education: EducationItem[] = [
     school: '수원공업고등학교',
     major: '전자통신과',
     period: '2012.03 ~ 2015.02'
+  }
+];
+
+export const certifications: CertificationItem[] = [
+  {
+    name: '전자캐드기능사',
+    acquiredAt: '2014.07'
   }
 ];
