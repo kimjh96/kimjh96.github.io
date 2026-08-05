@@ -138,9 +138,8 @@ export const projects: ProjectItem[] = [
   },
   {
     name: 'flemo',
-    tagline: '네이티브 같은 화면 전환을 위한 React 라우터',
-    description:
-      '웹에서도 네이티브 앱처럼 화면을 쌓고 되돌아갈 수 있도록 만든 React 라우터입니다. 하이브리드 앱의 화면 전환과 히스토리 관리를 단순화합니다.',
+    tagline: '화면 단위로 동작하는 라우터',
+    description: '화면을 쌓고 되돌리는 동작과 전환 애니메이션, 제스처를 함께 제공합니다.',
     links: [
       { label: 'Web', href: 'https://flemo.dev' },
       { label: 'GitHub', href: 'https://github.com/kimjh96/flemo' }
