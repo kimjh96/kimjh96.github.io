@@ -7,11 +7,11 @@ import Projects from '@sections/Projects';
 import useThemeMode from '@hooks/useThemeMode';
 
 function App() {
-  const { mode, setPreference } = useThemeMode();
+  const { preference, setPreference } = useThemeMode();
 
   return (
     <>
-      <Header mode={mode} onPreferenceChange={setPreference} />
+      <Header preference={preference} onPreferenceChange={setPreference} />
       <main>
         <Hero />
         <Experience />
