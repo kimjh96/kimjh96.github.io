@@ -56,9 +56,9 @@ export const experiences: ExperienceItem[] = [
   {
     company: '액트노바',
     role: 'Frontend Developer',
-    period: '2025.12 ~ 현재',
+    period: '2025.12 ~ 2026.08',
     location: '서울',
-    summary: '동물 행동 분석 소프트웨어 ‘액트버스’의 프론트엔드를 담당하고 있습니다.',
+    summary: '동물 행동 분석 소프트웨어 ‘액트버스’의 프론트엔드를 담당했습니다.',
     stack: ['React', 'Next.js', 'Vite', 'TypeScript', 'Tailwind CSS']
   },
   {
